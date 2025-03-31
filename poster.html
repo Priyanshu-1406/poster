@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emissions: A Global Challenge</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .hover-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 250px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -125px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="max-w-7xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-6 text-center">
+            <h1 class="text-5xl font-bold mb-4">EMISSIONS: EARTH'S CRITICAL CHALLENGE</h1>
+            <p class="text-xl">A Comprehensive Analysis of Environmental Impact</p>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-3 gap-6 p-8">
+            <!-- Left Column: Two-Wheeler Emissions -->
+            <div class="bg-blue-50 p-6 rounded-lg hover-card">
+                <h2 class="text-3xl font-bold mb-6 text-blue-800 text-center">
+                    🏍️ Two-Wheeler Lifetime Emissions
+                </h2>
+                
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h3 class="font-bold text-xl mb-2">💨 Emission Breakdown</h3>
+                        <ul class="list-disc pl-5">
+                            <li>CO₂: 6 metric tons (98.5%)</li>
+                            <li>CO: 90 kg</li>
+                            <li>NOx: 6 kg</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h3 class="font-bold text-xl mb-2">🚲 Vehicle Lifetime Stats</h3>
+                        <p>Average Distance: 60,000 km</p>
+                        <p>Vehicle Lifespan: 10-15 years</p>
+                    </div>
+
+                    <div class="bg-yellow-100 p-4 rounded-lg">
+                        <h3 class="font-bold text-xl mb-2">🌍 Mind-Blowing Fact!</h3>
+                        <p class="tooltip">
+                            One two-wheeler emits equivalent CO₂ to 
+                            <span class="tooltiptext">This is roughly the same as burning 2,700 kg of coal or driving a car for 15,000 km!</span>
+                            300 mature trees can absorb in a year
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Column: Environmental Cycle Impacts -->
+            <div class="bg-green-50 p-6 rounded-lg hover-card">
+                <h2 class="text-3xl font-bold mb-6 text-green-800 text-center">
+                    🌱 Environmental Cycle Disruption
+                </h2>
+
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h3 class="font-bold text-xl mb-2">🌡️ Carbon Cycle Impact</h3>
+                        <p>Total Carbon Emitted: 2.89 million tons/year</p>
+                        <ul class="list-disc pl-5">
+                            <li>Industry: 4.97 million tons/year</li>
+                            <li>Residential & Commercial: 3.24 million tons/year</li>
+                            <li>Transport: 2.59 million tons/year</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h3 class="font-bold text-xl mb-2">☢️ Nitrogen Cycle Disruption</h3>
+                        <p>Total Nitrogen Input: 84,800 tons/year</p>
+                        <p>Net Nitrogen Accumulation: 61,150 tons/year</p>
+                        <p class="text-red-600 font-bold">N₂O is 300x stronger than CO₂ at trapping heat!</p>
+                    </div>
+
+                    <div class="bg-blue-100 p-4 rounded-lg">
+                        <h3 class="font-bold text-xl mb-2">🔬 Particulate Matter (PM) Alert</h3>
+                        <ul class="list-disc pl-5">
+                            <li>PM 2.5 Emissions: 12.5M metric tons/year</li>
+                            <li>PM 10 Emissions: 25M metric tons/year</li>
+                            <li>Black Carbon Emissions: 1.1M metric tons/year</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Mitigation Strategies -->
+            <div class="bg-red-50 p-6 rounded-lg hover-card">
+                <h2 class="text-3xl font-bold mb-6 text-red-800 text-center">
+                    🌍 Road to Sustainability
+                </h2>
+
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h3 class="font-bold text-xl mb-2">🌳 Afforestation for Net-Zero</h3>
+                        <p>Total Emissions: 15.1 million tonnes CO₂/year</p>
+                        <p>Trees Required to Offset: 524.3 million trees</p>
+                        <p>Carbon Sequestration per Tree: 28.8 kg CO₂/year</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h3 class="font-bold text-xl mb-2">🚀 Mitigation Strategies</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Electric Two-Wheeler Transition
+                                <span class="text-sm block text-green-600">Target: 30% EV penetration by 2030</span>
+                            </li>
+                            <li>Implement BS-VI Emission Standards</li>
+                            <li>Promote Public Transport</li>
+                            <li>Urban Afforestation Programs</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-yellow-100 p-4 rounded-lg">
+                        <h3 class="font-bold text-xl mb-2">🌈 Collaborative Action Needed!</h3>
+                        <p>Collective efforts are crucial to balance environmental cycles and secure a sustainable future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-gray-200 p-4 text-center">
+            <h3 class="font-bold">Research Team</h3>
+            <p>Jeel Kapadiya (AU2340204) | Priyanshu Varshney (AU2340158) | Vansh Dobariya (AU2340231)</p>
+            <p class="text-sm mt-2">Data Sources: CPCB, MoEFCC, IITM, Forest Survey of India (2023)</p>
+        </div>
+    </div>
+
+    <script>
+        // Optional interactive elements can be added here
+        document.querySelectorAll('.hover-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.02)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
